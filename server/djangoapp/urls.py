@@ -19,6 +19,12 @@ urlpatterns = [
     # Get Cars
     path(route='get_cars', view=views.get_cars, name='getcars'),
 
+    # Get Dealers
+    path(route='get_dealers', view=views.get_dealers, name='get_dealers'),
+
+    # Get Dealer by ID
+    path(route='dealer/<int:dealer_id>', view=views.get_dealer, name='get_dealer'),
+
     # Dealer Reviews
     path(route='reviews/dealer/<int:dealer_id>', view=views.get_dealer_reviews, name='dealer_reviews'),
 
